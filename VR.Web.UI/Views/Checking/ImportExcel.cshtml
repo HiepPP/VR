@@ -1,0 +1,138 @@
+﻿@model VR.Web.UI.ViewModel.ImportExcelViewModel
+@{
+    ViewBag.Title = "ImportExcel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--Form to upload file-->
+@using (Html.BeginForm("ImportExcel", "Checking", FormMethod.Post, new { @class = "container form-horizontal", encType = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <!-- Form Name -->
+        <h4 style="text-align:center;font-size:30px;text-transform:uppercase">@VR.Web.UI.Language.Resource_FileExcelUpload.Title</h4>
+        <!--Display Error-->
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <!--Hide Customer Id value-->
+        @Html.HiddenFor(x => x.CustomerId)
+        <div class="form-group">
+            <!--Label for VesselId of ImportExcelViewModel-->
+            @Html.LabelFor(model => model.VesselId, htmlAttributes: new
+       {
+           @class = "control-label col-md-4"
+       })
+            <div class="col-md-3">
+                <!--Dropdownlist of Voyage Code-->
+                @if (ViewBag.VesselId != null)
+                {
+                    @Html.DropDownList("VesselId", null, "", new { @class = "form-control col-md-3" })
+                }
+                else
+                {
+                    <select></select>
+                }
+            </div>
+            <!--Valid VesselCode with ViewModel-->
+            @Html.ValidationMessageFor(model => model.VesselId, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <!--Label for VesselName of ImportExcelViewModel-->
+            @Html.LabelFor(model => model.VesselName, htmlAttributes: new
+       {
+           @class = "control-label col-md-4"
+       })
+            <div class="col-md-4">
+                <!--Vessel Name-->
+                <p id="VesselName"></p>
+            </div>
+        </div>
+        <div class="form-group">
+            <!--Label for CustomerName of ImportExcelViewModel-->
+            @Html.LabelFor(model => model.CustomerName, htmlAttributes: new
+       {
+           @class = "control-label col-md-4"
+       })
+            <div class="col-md-3">
+                <!--Dropdownlist of Customer after choosing a voyage-->
+                <select id="CustomerName" name="CustomerName" class="form-control"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <!--Label for FileImport of ImportExcelViewModel-->
+            @Html.LabelFor(model => model.FileImport, htmlAttributes: new
+       {
+           @class = "control-label col-md-4"
+       })
+            <div class="col-md-4">
+                <!--Choose file to upload-->
+                @Html.TextBoxFor(m => m.FileImport, new { type = "file" })<br /><br />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-4 col-md-3">
+                <a href="@System.Web.Configuration.WebConfigurationManager.AppSettings["UploadFileExample"]"
+                   download="Sample.xls">@VR.Web.UI.Language.Resource_FileExcelUpload.DownloadSample</a>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-4 col-md-10">
+                <!--Submit form-->
+                <input type="submit" value="@VR.Web.UI.Language.Resource_FileExcelUpload.UploadButton" class="btn btn-danger" />
+            </div>
+        </div>
+    </fieldset>
+}
+<script type="text/javascript">
+    //Choose another Voyage Code
+    $("#VesselId").on('change',function(){
+        //Get value of chosen one
+        var chosen = $('#VesselId').val();
+        if(chosen==null || chosen==''){
+            //No chosen -> default tag
+            $("p#VesselName").html('');
+            $('select#CustomerName').html('<option value=""></option>');
+        }
+        else{
+            //HttpPost to get Customer by Voyage
+            $('#CustomerName').html('');
+            $.ajax({
+                url: '@Url.Action("GetCustomerByVoy")', //url
+                type: 'POST',
+                data: {
+                    voyId: chosen //Voyage Id
+                },
+                success: function(result){
+                    //set dropdownlist for list of customer if get data success
+                    $('select#CustomerName').append('<option value=""></option>');
+                    result.lstCustomer.forEach(function(item,index){
+                        //Iniatial a new element option
+                        var option=document.createElement('option');
+                        $(option).val(item[0]);
+                        $(option).html(item[1]);
+                        //Add option to dropdownlist
+                        $('select#CustomerName').append(option);
+                    })
+                }
+            })
+            var jScriptArray=[];
+            //Get array data from Viewbag.Vesselname
+            var array = @Html.Raw(Json.Encode(@ViewBag.VesselName));
+            for(var i = 0; i < array.length; i++) {
+                //Make a 2 dimension array
+                jScriptArray.push(array[i]);
+            }
+            //Compare between array and selected value of dropdownlist of Voyage Code
+            jScriptArray.forEach(function(item, index){
+                if(item[0]==chosen)
+                {
+                    //Display Vessel Name by Voyage Code
+                    $("p#VesselName").html(item[1]);
+                    return false;
+                }
+            })
+        }
+    })
+    //Set Customer Id by selected value of Dropdownlist of Customer
+    $('select#CustomerName').on('change', function(){
+        $('#CustomerId').val($(this).val());
+    })
+</script>          

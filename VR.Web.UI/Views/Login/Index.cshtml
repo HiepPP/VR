@@ -1,0 +1,52 @@
+﻿<link href="/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="/Content/Login_Style.css" rel="stylesheet" />
+@model VR.Web.UI.ViewModel.LoginViewModel
+@using VR.Web.UI.Language
+<div class="row">
+    <div class="col-md-12">
+        <div class="wrap">
+            <p class="form-title">
+                @Resource_LoginHome.Login_title
+            </p>
+            <div style="text-align:center;color:red">
+                @if (TempData["message"] != null)
+                {
+                    @TempData["message"].ToString()
+                }
+            </div>
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { onsubmit = "return validateForm()" }))
+            {
+                //text box for username
+                    <div class="form-group">
+                        @Html.TextBoxFor(x => x.USER_NAME, new
+                   {
+                       @placeholder = Resource_LoginHome.USER_NAME_pla,
+                       @class = "form-control input-md"
+                   })
+                        <label class="control-label" style="color:red;">
+                        @Html.ValidationMessageFor(x => x.USER_NAME)
+                        </label>
+                    </div>
+                //tex box for password
+                    <div class="form-group">
+                        @Html.TextBoxFor(x => x.PWD, new
+                   {
+                       @placeholder = Resource_LoginHome.PWD_pla,
+                       @type = "password",
+                       @class = "form-control input-md"
+                   })
+                        <label class="control-label" style="color:red;">
+                            @Html.ValidationMessageFor(x => x.PWD)
+                        </label>
+                    </div>
+                //button login
+                        <div class="form-group">
+                            <input type="submit" value="@Resource_LoginHome.btn_value"
+                             class="btn btn-success btn-sm" />
+                        </div>
+            }          
+        </div>
+    </div>
+</div>
+
+

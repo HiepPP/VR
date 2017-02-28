@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @using VR.Web.UI.Language
+    <!--http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-fluid-layout.php -->
+    <nav id="myNavbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" onclick="window.location.href='/Home/Index'" href="#">@Resource_LoginHome.lbl_Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">  
+                <div style="float:right">
+                    <!--lable username-->
+                    <label style="color:white">@Resource_Config.lbl_welcome</label>
+                    <label style="color:white;text-transform:uppercase">@User.Identity.Name !</label>
+                    <!--button logout-->
+                    <form action="@Url.Action("LogOut","Login")" method="post">
+                        <button type="submit" class="btn btn-info">@Resource_LoginHome.btn_DangXuat</button>
+                    </form>
+                </div>             
+            </div>
+        </div>
+    </nav>
+    <div>
+        
+        <div>
+            @RenderBody()
+        </div>             
+    </div>
+        @RenderSection("scripts", required: false)
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

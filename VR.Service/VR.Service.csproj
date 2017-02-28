@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC9B26F1-EC12-4EFD-853E-B8751A4887F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VR.Service</RootNamespace>
+    <AssemblyName>VR.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.2.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.0\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Services\IOraAppUserService.cs" />
+    <Compile Include="Services\IOraTruckService.cs" />
+    <Compile Include="Services\IOraVoyageService.cs" />
+    <Compile Include="Services\OraAppUserService.cs" />
+    <Compile Include="Services\OraTruckService.cs" />
+    <Compile Include="Services\OraVoyageService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AssignService.cs" />
+    <Compile Include="Services\ConfigurationService.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\ExcelDetailService.cs" />
+    <Compile Include="Services\FileExcelService.cs" />
+    <Compile Include="Services\IAssignService.cs" />
+    <Compile Include="Services\IConfigurationService.cs" />
+    <Compile Include="Services\ICustomerService.cs" />
+    <Compile Include="Services\IExcelDetailService.cs" />
+    <Compile Include="Services\IFileExcelService.cs" />
+    <Compile Include="Services\IUserService .cs" />
+    <Compile Include="Services\IVoyageSerivce.cs" />
+    <Compile Include="Services\UserService .cs" />
+    <Compile Include="Services\VoyageSerivce.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VR.DAL\VR.DAL.csproj">
+      <Project>{d1729852-7de8-46c3-97de-2cced61aa044}</Project>
+      <Name>VR.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VR.Infrastructure\VR.Infrastructure.csproj">
+      <Project>{47FF7E42-DD09-4876-9F8C-A7648AD7E96C}</Project>
+      <Name>VR.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VR.OracleProvider\VR.OracleProvider.csproj">
+      <Project>{03050ffb-6c1b-4b26-a15d-cd8b7642031f}</Project>
+      <Name>VR.OracleProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

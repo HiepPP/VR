@@ -1,0 +1,97 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.motherbox{
+    margin-left: 50px;
+}
+.regisbox{
+    height: 500px;
+    /*background-color: coral;*/
+    border: dashed;
+    margin: 5px;
+}
+/*Box for regis*/
+body{padding-top:30px;}
+
+.btn {
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+            transition: all 0.3s;
+}
+.btn-thanhcong {
+    background: #5cb85c;
+    border: 3px solid #5cb85c;
+    color: #000000;
+}
+
+/*.btn-info {
+    background: none;
+    border: 3px solid #5bc0de;
+    color: #5bc0de;
+}
+.btn-info:hover,
+.btn-info:active {
+    color: #FFF;
+    background: #39b3d7;
+}*/
+
+.btn-hethan {
+    background: #d2322d;
+    border: 3px solid #d2322d;
+    color: #000000;
+}
+
+.btn-chuathaotac {
+    background: none;
+    border: 3px solid #000000;
+    color: #000000;
+}
+
+.btn-conhan {
+    background: #909090;
+    border: 3px solid #909090;
+    color: #000000;
+}
+.btn-coloi {
+    background: #e9ec01;
+    border: 3px solid #e9ec01;
+    color: #000000;
+}
+.btn-dangthaotac{
+    background: #428bca;
+    border: 3px solid #428bca;
+    color: #000000;
+}
+.btn-coloi:hover,
+.btn-coloi:active,.btn-conhan:hover,
+.btn-conhan:active,.btn-hethan:hover,
+.btn-hethan:active,.btn-thanhcong:hover,
+.btn-thanhcong:active,.btn-chuathaotac:hover,
+.btn-chuathaotac:active,.btn-chuathaotac:hover,
+.btn-chuathaotac:active {
+    color: #000000;
+    border: 3px solid #428bca;
+    background: #428bca;
+}

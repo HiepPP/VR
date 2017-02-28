@@ -1,0 +1,109 @@
+﻿@using VR.Web.UI.Language;
+@using VR.DAL.Model;
+@model VR.Web.UI.ViewModel.ListResultViewModel
+
+@{
+    ViewBag.Title = @Resource_ExcelDetail.title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int STT = 1;
+}
+
+@*Css for table*@
+<style type="text/css">
+    table {
+        border-collapse: collapse;
+    }
+    table, td, th {
+        border: 1px solid black;
+        text-align: center;
+    }
+</style>
+
+@*Title of view*@
+<h1 style="text-align: center">@Resource_ExcelDetail.title</h1>
+
+@*Display data from ViewModel*@ 
+<div class="container">
+    @Html.LabelFor(Model => Model.VesselCode) : @Model.VesselCode<br />
+    @Html.LabelFor(Model => Model.VesselName) : @Model.VesselName<br />
+    @Html.LabelFor(Model => Model.Customer) : @Model.Customer<br />
+    @Html.LabelFor(Model => Model.FileName) : 
+    @Html.ActionLink( Model.FileName, "Download","Log",
+                     new { fileExcelName = Model.FileName, fileExcelId = ViewBag.fileExcelId } , null)<br />
+    @*User thi form to pass truckStatus help filter*@ 
+    <form method="get" id="FormSubmitFilter" action="/Log/ViewRegitrasionInfomation">
+        <input type="hidden" name="fileExcelId" value=@ViewBag.fileExcelId>
+        <input type="hidden" id="filter" name="truckStatus" />
+    </form>
+    @*Dropdown list*@ 
+    <b>Result filter</b> @Html.DropDownList("Items", null, new { @id = "items"})
+    <br />    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(x => x.ResultViewModels.FirstOrDefault().STT)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(x => x.ResultViewModels.FirstOrDefault().TruckNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(x => x.ResultViewModels.FirstOrDefault().ChassicNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(x => x.ResultViewModels.FirstOrDefault().DriverName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(x => x.ResultViewModels.FirstOrDefault().DriverId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(x => x.ResultViewModels.FirstOrDefault().Result)
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.ResultViewModels)
+        {
+            <tr>
+                <td>@STT</td>
+                @{ STT++;}
+                <td>@item.TruckNo</td>
+                <td>@item.ChassicNo</td>
+                <td>@item.DriverName</td>
+                <td>@item.DriverId</td>
+                @switch (item.TruckStatus)
+                {
+                    case TruckStatus.NotYetCheck:
+                        <td style="background-color:white">@item.Result</td>
+                        break;
+                    case TruckStatus.GetInfoAndValid:
+                        <td style="background-color:forestgreen">@item.Result</td>
+                        break;
+                    case TruckStatus.GetInfoButNotValid:
+                        <td style="background-color:red">@item.Result</td>
+                        break;
+                    case TruckStatus.HaveInfoAndValid:
+                        <td style="background-color:grey">@item.Result</td>
+                        break;
+                    case TruckStatus.ErrorWhileChecking:
+                        <td style="background-color:yellow">@item.Result</td>
+                        break;
+                    default:
+                        <td>@item.Result</td>
+                        break;
+                }
+            </tr>
+        }
+    </table>
+</div>
+
+@*Script help filter data*@
+<script>
+    $('#items').on('change', function () {
+        var chosen = $('#items').val();     
+        $('#filter').val(chosen);
+        $('form#FormSubmitFilter').submit();
+    })
+
+</script>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>

@@ -1,0 +1,129 @@
+﻿@using VR.Web.UI.Language;
+
+@model List<VR.Web.UI.ViewModel.LogViewModel>
+
+@{
+
+    ViewBag.Title = Resource_Log.TabTitle;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int No = 1;
+}
+
+@*Css for table*@
+<style type="text/css">
+    table {
+        border-collapse: collapse;
+    }
+
+    table, td, th {
+        border: 1px solid black;
+        text-align: center;
+    }
+</style>
+
+@*Title of view*@
+<h1 style="text-align: center">@Resource_Log.LogTitle</h1>
+<br />
+@*User thi form to filter*@
+<form method="get" id="FormSubmitFilter" action="/Log/LogInformation">
+    <input type="hidden" id="filter" name="filter" />
+</form>
+@*Dropdown list*@
+<div class="container">
+    <b>Vessel</b> @Html.DropDownList("LogFilter", null, new { @id = "items" })
+    <br />   <br />
+</div>
+<table class="container">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(x => x.FirstOrDefault().No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.FirstOrDefault().ImpDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.FirstOrDefault().ImpUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.FirstOrDefault().VesselCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.FirstOrDefault().CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.FirstOrDefault().Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.FirstOrDefault().FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.FirstOrDefault().Continue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.FirstOrDefault().View)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.FirstOrDefault().RowImported)
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@No</td>
+            @{ No++;}
+            <td>@item.ImpDate</td>
+            <td>@item.ImpUser</td>
+            <td>@item.VesselCode</td>
+            <td>@item.CustomerName</td>
+            @if (@item.IsUpdate)
+            {
+                <td class="blue">@item.Status</td>
+                <td>
+                    @Html.ActionLink("Continute", "GetInfoRegis", "Checking",
+                    new { excelId = item.ExcelId }, new { @class = "blue" })
+                </td>
+                <td>
+                    @Html.ActionLink("View", "ViewRegitrasionInfomation", "Log",
+                    new { fileExcelId = item.ExcelId }, new { @class = "blue" })
+                </td>
+            }
+            else
+            {
+                <td class="red">@item.Status</td>
+                <td>
+                    @Html.ActionLink("Continute", "GetInfoRegis", "Checking",
+                    new { excelId = item.ExcelId }, new { @class = "red" })
+                </td>
+                <td>
+                    @Html.ActionLink("View", "ViewRegitrasionInfomation", "Log",
+                    new { fileExcelId = item.ExcelId }, new { @class = "red" })
+                </td>
+            }
+            <td>@item.FileName</td>
+
+            @if (item.IsDone)
+            {
+                <td class="blue">@item.RowImported</td>
+            }
+            else
+            {
+                <td class="red">@item.RowImported</td>
+            }
+
+        </tr>
+     }
+</table>
+
+<script>
+    @*Script help filter data*@
+    $('#items').on('change', function () {
+        var chosen = $('#items').val();
+        $('#filter').val(chosen);
+        $('form#FormSubmitFilter').submit();
+    })
+    @*Script change color*@
+    $(".blue").css("color", "lightskyblue");
+    $(".red").css("color", "red");
+</script>

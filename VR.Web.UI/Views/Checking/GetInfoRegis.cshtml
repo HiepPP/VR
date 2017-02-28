@@ -1,0 +1,138 @@
+﻿@using VR.Infrastructure.Utilities;
+@using VR.Web.UI.Language;
+@model VR.Web.UI.ViewModel.GetRegisInfoViewModel
+@{
+    ViewBag.Title = "GetInfoRegis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+@section scripts{
+    <script type="text/javascript">
+        var getInfo = function (exceldetailId) {
+            $('.btn-dangthaotac').removeClass('btn-dangthaotac');
+            $('#message').text("");
+            $('#' + exceldetailId).addClass("btn-dangthaotac");
+            $.ajax({
+                url: "/Checking/GetJsonPlateInfo/",
+                data: { exceldetailId: exceldetailId },
+                type: "POST",
+                success: function (result) {
+                    if(result.Status == "NotYetCheck")
+                    {
+                        $('#formsubmit').show();
+                        $('#plateNo').text(result.PlateNumber);
+                        $('#captcha').attr("src", result.ImgCaptcha);
+                        var d = new Date();
+                        $('#captcha').attr("src", $('#captcha').attr("src")+"?="+d.getMilliseconds());
+                        $('#LicensePlate').val(result.PlateNumber);
+                        $('#ExcelDetailId').val(result.ExcelDetailId);
+                    }
+                    else{
+                        $('#formsubmit').hide();
+                        $('#truckinfo').show();
+                        $('#TRK_TYPE').text(result.TRK_TYPE);
+                        $('#TRK_NO').text(result.TRK_NO);
+                    }
+                }
+            });
+        }
+        $(document).ready(function () {
+            $('.btn[data-process="True"]').addClass('btn-dangthaotac');
+        });
+    </script>
+}
+<div class="motherbox">
+    <div class="col-md-2 regisbox">
+        <h4 style="text-align:center">Danh sách biển số xe</h4>
+        <div>
+            @if (Model.PlateLst.IsNotNull())
+            {
+                foreach (var item in Model.PlateLst)
+                {
+                    if (item.PlateStatus == VR.DAL.Model.TruckStatus.NotYetCheck)
+                    {
+                        <p><a href="#" id="@item.ExcelDetailId" onclick="getInfo(@item.ExcelDetailId)" data-process="@item.OnProcessing" class="btn btn-block btn-chuathaotac">@item.PlateNo</a></p>
+                    }
+                    else if (item.PlateStatus == VR.DAL.Model.TruckStatus.ErrorWhileChecking)
+                    {
+                        <p><a href="#" id="@item.ExcelDetailId" onclick="getInfo(@item.ExcelDetailId)" data-process="@item.OnProcessing" class="btn btn-block btn-coloi">@item.PlateNo</a></p>
+                    }
+                    else if (item.PlateStatus == VR.DAL.Model.TruckStatus.GetInfoButNotValid)
+                    {
+                        <p><a href="#" id="@item.ExcelDetailId" onclick="getInfo(@item.ExcelDetailId)" data-process="@item.OnProcessing" class="btn btn-block btn-hethan">@item.PlateNo</a></p>
+                    }
+                    else if (item.PlateStatus == VR.DAL.Model.TruckStatus.GetInfoAndValid)
+                    {
+                        <p><a href="#" id="@item.ExcelDetailId" onclick="getInfo(@item.ExcelDetailId)" data-process="@item.OnProcessing" class="btn btn-block btn-thanhcong">@item.PlateNo</a></p>
+                    }
+                    else if (item.PlateStatus == VR.DAL.Model.TruckStatus.HaveInfoAndValid)
+                    {
+                        <p><a href="#" id="@item.ExcelDetailId" onclick="getInfo(@item.ExcelDetailId)" data-process="@item.OnProcessing" class="btn btn-block btn-conhan">@item.PlateNo</a></p>
+                    }
+                    else if (item.PlateStatus == VR.DAL.Model.TruckStatus.OnProcessing)
+                    {
+                        <p><a href="#" id="@item.ExcelDetailId" onclick="getInfo(@item.ExcelDetailId)" data-process="@item.OnProcessing" class="btn btn-block btn-dangthaotac">@item.PlateNo</a></p>
+                    }
+                }
+            }
+        </div>
+    </div>
+    <div class="col-md-6 regisbox">
+        <h4 style="text-align:center">Lấy thông tin đăng kiểm</h4>        
+        <div>
+            <span>Vessel Code: </span> @Model.VesselCode <br />
+            <span>Vessel Name: </span> @Model.VesselName <br />
+            <span>Customer (Partner): </span> @Model.Customer <br />
+            <span>Lisence Plate: </span><span id="plateNo">@Model.LicensePlate</span><br />
+            @if (Model.HaveNotCheckYet)
+            {
+                using (Html.BeginForm("GetDataFromVR", "Checking", FormMethod.Post, new {id="formsubmit" }))
+                {
+                    @Html.HiddenFor(x => x.LicensePlate)
+                    @Html.HiddenFor(x => x.ExcelDetailId)
+                    @Html.HiddenFor(x => x.FileExcelId)
+                    <span> <img id="captcha" src="@Model.CaptchaURL" alt="Image URL" /></span><br />
+                    <span> @Html.TextBoxFor(x => x.CaptchaConfirm)</span><br />
+                    <input type="submit" value="Get Truck Information" /><br />
+                    <input type="button" value="Skip" />
+                }
+            }
+            else
+            {
+                if (Model.Truck != null)
+                {
+                    //Html.RenderPartial("_ParitalViewTruckInfo", Model.Truck);
+                    <div id="truckinfo">
+                        <h3>Thông tin phương tiện</h3>
+                        <span id="TRK_TYPE">Loại phương tiện: @Model.Truck.TRK_TYPE</span><br />
+                        <span id="TRK_NO">Loại phương tiện: @Model.Truck.TRK_NO</span><br />
+                        <span id="KERB_MASS">Số lượng chở: @Model.Truck.KERB_MASS</span><br />
+                        <span id="NET_OVERWEI">Khối lượng bản thân: @Model.Truck.NET_OVERWEI</span><br />
+                        <span id="TRK_AXLE">Số trục: @Model.Truck.TRK_AXLE</span><br />
+                        <span id="DATE_CHECK">Ngày kiểm định: @Model.Truck.DATE_CHECK</span><br />
+                        <span id="GCN_STAMP">Số tem: @Model.Truck.GCN_STAMP</span><br />
+                    </div>
+
+                }
+            }
+            @if (TempData[Resource_GetTruck.message] != null)
+            {
+                <span id="message" style="color:red">
+                    @TempData[Resource_GetTruck.message].ToString()
+                </span>
+                
+            }
+        </div>
+    </div>
+    <div class="col-md-3 regisbox">
+        <h4 style="text-align:center">Chú thích</h4>
+        <div>
+            <p><a href="#" class="btn btn-block btn-chuathaotac">Chưa thao tác </a></p>
+            <p><a href="#" class="btn btn-block btn-coloi">Có lỗi khi thao tác</a></p>
+            <p><a href="#" class="btn btn-block btn-hethan">Lấy thông tin nhưng hết hạn</a></p>
+            <p><a href="#" class="btn btn-block btn-thanhcong">Lấy thông tin thành công, còn hạn</a></p>
+            <p><a href="#" class="btn btn-block btn-conhan">Đã có trong csdl, còn hạn</a></p>
+            <p><a href="#" class="btn btn-block btn-dangthaotac">Đang thao tác</a></p>
+        </div>
+    </div>
+</div>

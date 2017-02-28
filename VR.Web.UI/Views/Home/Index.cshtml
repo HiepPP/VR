@@ -1,0 +1,23 @@
+﻿@using VR.Web.UI.Language
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/Home_Style.css" rel="stylesheet" />
+<div class="container">
+    <div class="row">
+        <h2>@Resource_LoginHome.Title_home</h2>
+        <!--button Import-->
+        <div class="well text-center">            
+            <a onclick="window.location.href='/Checking/ImportExcel'"
+                id="close" name="send" 
+               class="btn btn-hot text-uppercase btn-lg">@Resource_LoginHome.ButtonImport</a>
+        </div>
+        <!--button view log-->
+        <div class="well text-center">
+            <a onclick="window.location.href='/Log/LogInformation'"
+                id="close" name="send" 
+               class="btn btn-sunny text-uppercase btn-lg">@Resource_LoginHome.ButtonLog</a>            
+        </div>
+    </div>
+</div>

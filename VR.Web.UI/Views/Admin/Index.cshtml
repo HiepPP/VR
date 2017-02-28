@@ -1,0 +1,207 @@
+﻿<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/Admin_Style.css" rel="stylesheet" />
+@using VR.Web.UI.Language
+<div class="container">
+    @model VR.Web.UI.ViewModel.AdminViewModel
+    @using (Html.BeginForm("Index", "Admin", FormMethod.Post, new { @class = "form-horizontal"}))
+    {
+        <form role="form" id="contact-form" class="contact-form">
+            <fieldset>
+                <label>@Resource_Config.lbl_welcome</label> <label style="color:blue;text-transform:uppercase">@User.Identity.Name !</label>
+                <!-- Form Name -->
+                <h1 class="admin_title" style="text-transform:uppercase; padding:1em">@Resource_Config.Title</h1>
+                <!--Check condition to catch alert-->
+                @if (TempData["AlertMessager"] != null)
+                {
+                    <div id="AlertBox" class="alert @TempData["AlertType"]">
+                        @TempData["AlertMessager"]
+                    </div>
+                }
+                @Html.HiddenFor(x => x.Id)
+                <!--Text box for WebsiteAddress-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label form-inline">@Resource_Config.lblWebsiteAddress</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.WebsiteAddress, new {
+                       @placeholder = Resource_Config.Title,
+                       @class = "form-control input-md"})                        
+                    </div>
+                    <!--Validationmessage for WebsiteAddress-->
+                    <div class="col-md-4">
+                        <label class="control-label" style="color:red;">
+                            @Html.ValidationMessageFor(x => x.WebsiteAddress)
+                        </label>
+                    </div>
+                </div>
+                <!--Text box for TruckType-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">@Resource_Config.lblTruckType</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.TruckType, new {
+                       @placeholder = Resource_Config.TruckType_pla,
+                       @class = "form-control input-md"})                      
+                    </div>
+                    <!--Validationmessage for TruckType-->
+                    <div class="col-md-4">
+                        <label class="control-label" style="color:red;">
+                            @Html.ValidationMessageFor(x => x.TruckType)
+                        </label>
+                    </div>
+                </div>
+                <!--Text box for NetWeight-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">@Resource_Config.lblNetWeight</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.NetWeight, new {
+                       @placeholder = Resource_Config.NetWeight_pla,
+                       @class = "form-control input-md"})
+                    </div>
+                    <!--Validationmessage for NetWeight-->
+                    <div class="col-md-4">
+                        <label class="control-label" style="color:red;">
+                            @Html.ValidationMessageFor(x => x.NetWeight)
+                        </label>
+                    </div>
+                </div>
+                <!--Text box for MaxSeat-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">@Resource_Config.lblMaxSeat</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.MaxSeat, new {
+                       @placeholder = Resource_Config.MaxSeat_pla,
+                       @class = "form-control input-md"})
+                    </div>
+                    <!--Validationmessage for MaxSeat-->
+                    <div class="col-md-4">
+                        <label class="control-label" style="color:red;">
+                            @Html.ValidationMessageFor(x => x.MaxSeat)
+                        </label>
+                    </div>
+                </div>
+                <!--Text box for DateCheck-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">@Resource_Config.lblDateCheck</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.DateCheck, new {
+                       @placeholder = Resource_Config.DateCheck_pla,
+                       @class = "form-control input-md"})
+                    </div>
+                    <!--Validationmessage for DateCheck-->
+                    <div class="col-md-4">
+                        <label class="control-label" style="color:red;">
+                            @Html.ValidationMessageFor(x => x.DateCheck)
+                        </label>
+                    </div>
+                </div>
+                <!--Text box for AxleNo-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">@Resource_Config.lblAxleNo</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.AxleNo, new {
+                       @placeholder = Resource_Config.AxleNo_pla,
+                       @class = "form-control input-md"})                       
+                    </div>
+                    <!--Validationmessage for AxleNo-->
+                    <div class="col-md-4">
+                        <label class="control-label" style="color:red;">
+                            @Html.ValidationMessageFor(x => x.AxleNo)
+                        </label>
+                    </div>
+                </div>
+                <!--Text box for WeightLimit-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">@Resource_Config.lblWeightLimit</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.WeightLimit, new {
+                       @placeholder = Resource_Config.WeightLimit_pla,
+                       @class = "form-control input-md"})                        
+                    </div>
+                    <!--Validationmessage for WeightLimit-->
+                    <div class="col-md-4">
+                        <label class="control-label" style="color:red;">
+                            @Html.ValidationMessageFor(x => x.WeightLimit)
+                        </label>
+                    </div>
+                </div>
+                <!--Text box for GrossWeight-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">@Resource_Config.lblGrossWeight</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.GrossWeight, new {
+                       @placeholder = Resource_Config.GrossWeight_pla,
+                       @class = "form-control input-md"})
+                    </div>
+                    <!--Validationmessage for GrossWeight-->
+                    <div class="col-md-4">
+                        <label class="control-label" style="color:red;">
+                            @Html.ValidationMessageFor(x => x.GrossWeight)
+                        </label>
+                    </div>
+                </div>
+                <!--Text box for TowedWeight-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">@Resource_Config.lblTowedWeight</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.TowedWeight, new {
+                       @placeholder = Resource_Config.TowedWeight_pla,
+                       @class = "form-control input-md"})
+                    </div>
+                    <!--Validationmessage for TowedWeight-->
+                    <div class="col-md-4">
+                        <label class="control-label" style="color:red;">
+                            @Html.ValidationMessageFor(x => x.TowedWeight)
+                        </label>
+                    </div>
+                </div>
+                <!--Text box for GCNDate-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">@Resource_Config.lblGCNDate</label>
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(x => x.GCNDate, new {
+                       @placeholder = Resource_Config.GCNDate_pla,
+                       @class = "form-control input-md"})                        
+                    </div>
+                    <!--Validationmessage for GCNDate-->
+                    <div class="col-md-4"><label class="control-label" style="color:red;">
+                        @Html.ValidationMessageFor(x => x.GCNDate)</label>
+                    </div>
+                </div>
+                <!--Text box for GCNStamp-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">@Resource_Config.lblGCNStamp</label>                    
+                        <div class="col-md-4">                          
+                           @Html.TextBoxFor(x => x.GCNStamp, new {
+                          @placeholder = Resource_Config.GCNStamp_pla,
+                          @class = "form-control input-md"})
+                        </div>
+                    <!--Validationmessage for GCNStamp-->
+                        <div class="col-md-4"><label class="control-label" style="color:red;" >
+                            @Html.ValidationMessageFor(x => x.GCNStamp)</label>
+                        </div>                   
+                </div>
+                <!--Button-->
+                <div class="form-group">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <!--Save Button-->
+                        <button type="submit" id="save" name="send" class="btn btn-primary ">@Resource_Config.btnsave</button>
+                        <!--Close Button-->
+                      
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    }
+    <form action="@Url.Action("LogOut","Login")" method="post">
+        <button type="submit" class="btn btn-danger">@Resource_Config.btnclose</button>
+    </form>
+   
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <!--script set time show alert -->
+    <script>
+        $(document).ready(function () {
+            $('#AlertBox').fadeIn("slow");
+            $('#AlertBox').delay(3000).slideUp(500);
+        });
+    </script>
+</div>

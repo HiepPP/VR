@@ -1,0 +1,381 @@
+/r
+2016-11-22 10:04:04,219 [11] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(TRUCK truckinfo)
+/r
+2016-11-22 13:56:55,227 [11] INFO  - Login success/r
+2016-11-22 13:58:34,131 [5] INFO  - Login success/r
+2016-11-22 13:59:06,529 [8] INFO  - Login success/r
+2016-11-22 14:00:30,338 [14] INFO  - Login success/r
+2016-11-22 14:00:53,786 [6] INFO  - LogInformation/r
+2016-11-22 14:01:04,805 [6] INFO  - GetVoyATD/r
+2016-11-22 14:01:04,888 [6] INFO  - Object reference not set to an instance of an object.System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.LogController.LogInformation() in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\LogController.cs:line 199
+/r
+2016-11-22 14:04:15,491 [10] INFO  - Login success/r
+2016-11-22 14:17:54,080 [7] INFO  - Login success/r
+2016-11-22 14:33:40,991 [20] INFO  - CheckingController ImportExcel/r
+2016-11-22 14:33:41,049 [20] INFO  - GetVoyATD/r
+2016-11-22 14:33:50,462 [23] INFO  - Checking Controller GetCustomerByVoy Error: /r
+2016-11-22 14:33:50,463 [23] INFO  - GetListPartnerOracle voyId=1/r
+2016-11-22 14:38:55,194 [15] INFO  - CheckingController ImportExcel/r
+2016-11-22 14:38:55,195 [15] INFO  - GetVoyATD/r
+2016-11-22 14:38:57,692 [15] INFO  - Checking Controller GetCustomerByVoy Error: /r
+2016-11-22 14:38:57,693 [15] INFO  - GetListPartnerOracle voyId=1/r
+2016-11-22 14:39:45,921 [15] INFO  - CheckingController ImportExcel(model)/r
+2016-11-22 14:39:45,922 [15] INFO  - GetVoyATD/r
+2016-11-22 14:39:46,004 [15] INFO  - Import voyCode=GDFN userId=user customerId=1 fileImported=ExcelSample1.xlsx/r
+2016-11-22 14:39:46,017 [15] INFO  - IsExcel FileName=ExcelSample1.xlsx/r
+2016-11-22 14:39:46,019 [15] INFO  - SaveExcel voyCode=GDFN path=C:\VR_Upload/22112016/ExcelSample1.xlsx customerId=1 userName=user/r
+2016-11-22 14:39:47,393 [15] INFO  - ReadFile fileName=ExcelSample1.xlsx excelId=2/r
+2016-11-22 14:39:47,988 [15] INFO  - SaveExcelDetail voyCode=GDFN/r
+2016-11-22 14:39:47,989 [15] INFO  - GetVoyATD/r
+2016-11-22 14:39:48,030 [15] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 14:39:48,174 [15] INFO  - SetChassisInfo voyId=1/r
+2016-11-22 14:39:48,175 [15] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 14:39:48,772 [15] INFO  - InsertTruck truckType=V/r
+2016-11-22 14:39:49,005 [15] INFO  - InsertTruck truckType=R/r
+2016-11-22 14:39:49,011 [13] INFO  - AssignTrkToVoy trkNo=72C12345 voyCode=GDFN partnerId=1/r
+2016-11-22 14:39:49,012 [15] INFO  - GetVoyATD/r
+2016-11-22 14:39:49,012 [9] INFO  - AssignTrkToVoy trkNo= voyCode=GDFN partnerId=1/r
+2016-11-22 14:39:49,012 [13] INFO  - GetVoyATD/r
+2016-11-22 14:39:49,013 [9] INFO  - GetVoyATD/r
+2016-11-22 14:39:49,014 [15] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 14:39:49,029 [15] INFO  - InsertTruck truckType=T/r
+2016-11-22 14:39:49,034 [7] INFO  - AssignTrkToVoy trkNo=52B56789 voyCode=GDFN partnerId=1/r
+2016-11-22 14:39:49,035 [7] INFO  - GetVoyATD/r
+2016-11-22 14:42:22,020 [6] INFO  - CheckingController ImportExcel/r
+2016-11-22 14:42:22,028 [6] INFO  - GetVoyATD/r
+2016-11-22 14:42:25,873 [6] INFO  - Checking Controller GetCustomerByVoy Error: /r
+2016-11-22 14:42:25,875 [6] INFO  - GetListPartnerOracle voyId=1/r
+2016-11-22 14:42:30,511 [23] INFO  - CheckingController ImportExcel(model)/r
+2016-11-22 14:42:30,512 [23] INFO  - GetVoyATD/r
+2016-11-22 14:42:30,538 [23] INFO  - Import voyCode=GDFN userId=user customerId=1 fileImported=ExcelSample1.xlsx/r
+2016-11-22 14:42:30,539 [23] INFO  - IsExcel FileName=ExcelSample1.xlsx/r
+2016-11-22 14:42:30,540 [23] INFO  - SaveExcel voyCode=GDFN path=C:\VR_Upload/22112016/ExcelSample1.xlsx customerId=1 userName=user/r
+2016-11-22 14:42:30,709 [23] INFO  - ReadFile fileName=ExcelSample1.xlsx excelId=3/r
+2016-11-22 14:42:30,968 [23] INFO  - SaveExcelDetail voyCode=GDFN/r
+2016-11-22 14:42:30,969 [23] INFO  - GetVoyATD/r
+2016-11-22 14:42:30,980 [23] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 14:42:31,003 [23] INFO  - SetChassisInfo voyId=1/r
+2016-11-22 14:42:31,003 [23] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 14:42:31,022 [23] INFO  - InsertTruck truckType=V/r
+2016-11-22 14:42:31,024 [23] INFO  - InsertTruck truckType=R/r
+2016-11-22 14:42:31,027 [32] INFO  - AssignTrkToVoy trkNo=72C12345 voyCode=GDFN partnerId=1/r
+2016-11-22 14:42:31,028 [32] INFO  - GetVoyATD/r
+2016-11-22 14:42:31,031 [23] INFO  - GetVoyATD/r
+2016-11-22 14:42:31,033 [33] INFO  - AssignTrkToVoy trkNo= voyCode=GDFN partnerId=1/r
+2016-11-22 14:42:31,034 [33] INFO  - GetVoyATD/r
+2016-11-22 14:42:32,115 [23] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 14:42:32,133 [23] INFO  - InsertTruck truckType=T/r
+2016-11-22 14:42:32,135 [34] INFO  - AssignTrkToVoy trkNo=52B56789 voyCode=GDFN partnerId=1/r
+2016-11-22 14:42:32,136 [34] INFO  - GetVoyATD/r
+2016-11-22 14:48:07,056 [8] INFO  - Login success/r
+2016-11-22 14:50:05,273 [8] INFO  - GetInfoRegis:System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at VR.Web.UI.Controllers.CheckingController.ConnectToVR() in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 325
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 188
+/r
+2016-11-22 14:58:12,686 [8] INFO  - Login success/r
+2016-11-22 15:05:44,707 [20] INFO  - GetVoyATD/r
+2016-11-22 15:22:04,129 [33] INFO  - GetVoyATD/r
+2016-11-22 15:30:05,936 [14] INFO  - GetVoyATD/r
+2016-11-22 15:35:37,423 [8] INFO  - GetVoyATD/r
+2016-11-22 15:36:34,501 [8] INFO  - GetVoyATD/r
+2016-11-22 15:36:44,262 [6] INFO  - GetVoyATD/r
+2016-11-22 15:36:53,983 [7] INFO  - GetVoyATD/r
+2016-11-22 15:44:52,368 [12] INFO  - GetVoyATD/r
+2016-11-22 15:47:07,731 [6] INFO  - GetVoyATD/r
+2016-11-22 15:51:14,792 [7] INFO  - GetVoyATD/r
+2016-11-22 15:52:14,628 [12] INFO  - GetVoyATD/r
+2016-11-22 16:00:35,797 [8] INFO  - GetVoyATD/r
+2016-11-22 16:21:34,737 [6] INFO  - GetVoyATD/r
+2016-11-22 16:21:51,307 [24] INFO  - GetVoyATD/r
+2016-11-22 16:21:54,458 [19] INFO  - GetVoyATD/r
+2016-11-22 16:22:02,485 [8] INFO  - GetVoyATD/r
+2016-11-22 16:22:17,726 [24] INFO  - GetVoyATD/r
+2016-11-22 16:22:25,356 [21] INFO  - GetVoyATD/r
+2016-11-22 16:22:42,566 [18] INFO  - GetVoyATD/r
+2016-11-22 16:23:46,825 [22] INFO  - GetVoyATD/r
+2016-11-22 16:24:23,856 [24] INFO  - GetVoyATD/r
+2016-11-22 16:28:15,530 [30] INFO  - GetVoyATD/r
+2016-11-22 16:30:07,686 [31] INFO  - GetVoyATD/r
+2016-11-22 16:30:49,693 [31] INFO  - GetVoyATD/r
+2016-11-22 16:45:58,217 [7] INFO  - GetVoyATD/r
+2016-11-22 16:48:33,045 [9] INFO  - GetVoyATD/r
+2016-11-22 17:05:21,831 [34] INFO  - Login success/r
+2016-11-22 17:05:30,197 [32] INFO  - LogInformation/r
+2016-11-22 17:05:30,335 [32] INFO  - GetVoyATD/r
+2016-11-22 17:05:30,337 [32] INFO  - Object reference not set to an instance of an object.System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.LogController.LogInformation(Nullable`1 filter) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\LogController.cs:line 212
+/r
+2016-11-22 17:05:34,643 [32] INFO  - LogInformation/r
+2016-11-22 17:05:34,647 [32] INFO  - GetVoyATD/r
+2016-11-22 17:05:34,650 [32] INFO  - Object reference not set to an instance of an object.System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Service.Services.FileExcelService.GetByVoyageNotDeparted() in D:\HiepPP\trunk\projects\group01\source\VR\VR.Service\Services\FileExcelService.cs:line 587
+   at VR.Web.UI.Controllers.LogController.LogInformation(Nullable`1 filter) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\LogController.cs:line 197
+/r
+2016-11-22 17:05:38,465 [32] INFO  - CheckingController ImportExcel/r
+2016-11-22 17:05:38,467 [32] INFO  - GetVoyATD/r
+2016-11-22 17:05:41,527 [16] INFO  - Checking Controller GetCustomerByVoy Error: /r
+2016-11-22 17:05:41,529 [16] INFO  - GetListPartnerOracle voyId=1/r
+2016-11-22 17:05:57,006 [8] INFO  - CheckingController ImportExcel(model)/r
+2016-11-22 17:05:57,007 [8] INFO  - GetVoyATD/r
+2016-11-22 17:05:57,040 [8] INFO  - Import voyCode=GDFN userId=user customerId=1 fileImported=ThongTinXe.docx/r
+2016-11-22 17:06:13,887 [32] INFO  - Checking Controller GetCustomerByVoy Error: /r
+2016-11-22 17:06:13,889 [32] INFO  - GetListPartnerOracle voyId=1/r
+2016-11-22 17:06:20,226 [16] INFO  - CheckingController ImportExcel(model)/r
+2016-11-22 17:06:20,227 [16] INFO  - GetVoyATD/r
+2016-11-22 17:06:20,229 [16] INFO  - Import voyCode=GDFN userId=user customerId=1 fileImported=ExcelSample1.xlsx/r
+2016-11-22 17:06:20,258 [16] INFO  - IsExcel FileName=ExcelSample1.xlsx/r
+2016-11-22 17:07:05,399 [16] INFO  - Checking Controller GetCustomerByVoy Error: /r
+2016-11-22 17:07:05,400 [16] INFO  - GetListPartnerOracle voyId=1/r
+2016-11-22 17:07:12,752 [35] INFO  - CheckingController ImportExcel(model)/r
+2016-11-22 17:07:12,752 [35] INFO  - GetVoyATD/r
+2016-11-22 17:07:12,752 [35] INFO  - Import voyCode=GDFN userId=user customerId=1 fileImported=ExcelSample1.xlsx/r
+2016-11-22 17:07:12,752 [35] INFO  - IsExcel FileName=ExcelSample1.xlsx/r
+2016-11-22 17:07:12,754 [35] INFO  - SaveExcel voyCode=GDFN path=C:\VR_Upload/22112016/ExcelSample1.xlsx customerId=1 userName=user/r
+2016-11-22 17:07:13,675 [35] INFO  - ReadFile fileName=ExcelSample1.xlsx excelId=4/r
+2016-11-22 17:07:14,324 [35] INFO  - SaveExcelDetail voyCode=GDFN/r
+2016-11-22 17:07:14,325 [35] INFO  - GetVoyATD/r
+2016-11-22 17:07:14,328 [35] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:07:14,334 [35] INFO  - SetChassisInfo voyId=1/r
+2016-11-22 17:07:14,335 [35] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:07:14,458 [35] INFO  - InsertTruck truckType=V/r
+2016-11-22 17:07:14,461 [35] INFO  - InsertTruck truckType=R/r
+2016-11-22 17:07:14,467 [35] INFO  - GetVoyATD/r
+2016-11-22 17:07:14,467 [39] INFO  - AssignTrkToVoy trkNo=72C12345 voyCode=GDFN partnerId=1/r
+2016-11-22 17:07:14,468 [40] INFO  - AssignTrkToVoy trkNo= voyCode=GDFN partnerId=1/r
+2016-11-22 17:07:14,469 [39] INFO  - GetVoyATD/r
+2016-11-22 17:07:14,469 [40] INFO  - GetVoyATD/r
+2016-11-22 17:07:15,571 [35] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:07:15,666 [35] INFO  - InsertTruck truckType=T/r
+2016-11-22 17:07:15,669 [42] INFO  - AssignTrkToVoy trkNo=52B56789 voyCode=GDFN partnerId=1/r
+2016-11-22 17:07:15,670 [42] INFO  - GetVoyATD/r
+2016-11-22 17:07:16,341 [35] INFO  - GetVoyATD/r
+2016-11-22 17:07:23,494 [16] INFO  - GetVoyATD/r
+2016-11-22 17:07:31,392 [35] INFO  - GetVoyATD/r
+2016-11-22 17:07:36,025 [37] INFO  - GetVoyATD/r
+2016-11-22 17:10:03,783 [44] INFO  - Login success/r
+2016-11-22 17:10:18,456 [48] INFO  - Login success/r
+2016-11-22 17:10:19,492 [47] INFO  - CheckingController ImportExcel/r
+2016-11-22 17:10:19,493 [47] INFO  - GetVoyATD/r
+2016-11-22 17:10:23,202 [47] INFO  - Checking Controller GetCustomerByVoy Error: /r
+2016-11-22 17:10:23,203 [47] INFO  - GetListPartnerOracle voyId=1/r
+2016-11-22 17:10:28,580 [47] INFO  - CheckingController ImportExcel(model)/r
+2016-11-22 17:10:28,581 [47] INFO  - GetVoyATD/r
+2016-11-22 17:10:28,587 [47] INFO  - Import voyCode=GDFN userId=user customerId=1 fileImported=ExcelSample1.xlsx/r
+2016-11-22 17:10:28,588 [47] INFO  - IsExcel FileName=ExcelSample1.xlsx/r
+2016-11-22 17:10:28,589 [47] INFO  - SaveExcel voyCode=GDFN path=C:\VR_Upload/22112016/ExcelSample1.xlsx customerId=1 userName=user/r
+2016-11-22 17:10:28,597 [47] INFO  - ReadFile fileName=ExcelSample1.xlsx excelId=5/r
+2016-11-22 17:10:28,606 [47] INFO  - SaveExcelDetail voyCode=GDFN/r
+2016-11-22 17:10:28,607 [47] INFO  - GetVoyATD/r
+2016-11-22 17:10:28,608 [47] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:10:28,612 [47] INFO  - SetChassisInfo voyId=1/r
+2016-11-22 17:10:28,612 [47] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:10:28,640 [47] INFO  - InsertTruck truckType=V/r
+2016-11-22 17:10:28,641 [47] INFO  - InsertTruck truckType=R/r
+2016-11-22 17:10:28,643 [49] INFO  - AssignTrkToVoy trkNo=72C12345 voyCode=GDFN partnerId=1/r
+2016-11-22 17:10:28,644 [49] INFO  - GetVoyATD/r
+2016-11-22 17:10:28,644 [47] INFO  - GetVoyATD/r
+2016-11-22 17:10:28,644 [50] INFO  - AssignTrkToVoy trkNo= voyCode=GDFN partnerId=1/r
+2016-11-22 17:10:28,647 [50] INFO  - GetVoyATD/r
+2016-11-22 17:10:28,646 [47] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:10:28,687 [47] INFO  - InsertTruck truckType=T/r
+2016-11-22 17:10:28,690 [47] INFO  - GetVoyATD/r
+2016-11-22 17:10:28,691 [51] INFO  - AssignTrkToVoy trkNo=52B56789 voyCode=GDFN partnerId=1/r
+2016-11-22 17:10:28,693 [51] INFO  - GetVoyATD/r
+2016-11-22 17:10:28,694 [47] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:10:28,699 [47] INFO  - SetChassisInfo voyId=1/r
+2016-11-22 17:10:28,700 [47] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:10:28,860 [47] INFO  - InsertTruck truckType=V/r
+2016-11-22 17:10:28,920 [47] INFO  - InsertTruck truckType=R/r
+2016-11-22 17:10:28,927 [52] INFO  - AssignTrkToVoy trkNo=60A36449 voyCode=GDFN partnerId=1/r
+2016-11-22 17:10:28,928 [52] INFO  - GetVoyATD/r
+2016-11-22 17:10:28,940 [53] INFO  - AssignTrkToVoy trkNo= voyCode=GDFN partnerId=1/r
+2016-11-22 17:10:28,942 [53] INFO  - GetVoyATD/r
+2016-11-22 17:10:29,156 [14] INFO  - GetVoyATD/r
+2016-11-22 17:13:08,771 [14] INFO  - CheckingController ImportExcel/r
+2016-11-22 17:13:08,771 [14] INFO  - GetVoyATD/r
+2016-11-22 17:13:12,090 [55] INFO  - Checking Controller GetCustomerByVoy Error: /r
+2016-11-22 17:13:12,092 [55] INFO  - GetListPartnerOracle voyId=1/r
+2016-11-22 17:13:24,564 [57] INFO  - CheckingController ImportExcel(model)/r
+2016-11-22 17:13:24,565 [57] INFO  - GetVoyATD/r
+2016-11-22 17:13:24,568 [57] INFO  - Import voyCode=GDFN userId=user customerId=1 fileImported=ExcelSample1.xlsx/r
+2016-11-22 17:13:24,569 [57] INFO  - IsExcel FileName=ExcelSample1.xlsx/r
+2016-11-22 17:13:24,570 [57] INFO  - SaveExcel voyCode=GDFN path=C:\VR_Upload/22112016/ExcelSample1.xlsx customerId=1 userName=user/r
+2016-11-22 17:13:24,633 [57] INFO  - ReadFile fileName=ExcelSample1.xlsx excelId=6/r
+2016-11-22 17:13:24,778 [57] INFO  - SaveExcelDetail voyCode=GDFN/r
+2016-11-22 17:13:24,779 [57] INFO  - GetVoyATD/r
+2016-11-22 17:13:24,782 [57] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:13:24,788 [57] INFO  - SetChassisInfo voyId=1/r
+2016-11-22 17:13:24,788 [57] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:13:24,948 [57] INFO  - InsertTruck truckType=V/r
+2016-11-22 17:13:24,950 [57] INFO  - InsertTruck truckType=R/r
+2016-11-22 17:13:24,952 [58] INFO  - AssignTrkToVoy trkNo=72C12345 voyCode=GDFN partnerId=1/r
+2016-11-22 17:13:24,952 [58] INFO  - GetVoyATD/r
+2016-11-22 17:13:24,959 [59] INFO  - AssignTrkToVoy trkNo= voyCode=GDFN partnerId=1/r
+2016-11-22 17:13:24,960 [59] INFO  - GetVoyATD/r
+2016-11-22 17:13:24,960 [57] INFO  - GetVoyATD/r
+2016-11-22 17:13:24,962 [57] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:13:24,978 [57] INFO  - InsertTruck truckType=T/r
+2016-11-22 17:13:24,991 [60] INFO  - AssignTrkToVoy trkNo=52B56789 voyCode=GDFN partnerId=1/r
+2016-11-22 17:13:24,992 [60] INFO  - GetVoyATD/r
+2016-11-22 17:13:24,994 [57] INFO  - GetVoyATD/r
+2016-11-22 17:13:24,996 [57] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:13:25,000 [57] INFO  - SetChassisInfo voyId=1/r
+2016-11-22 17:13:25,000 [57] INFO  - SaveExcelDetail voyId=1/r
+2016-11-22 17:13:25,016 [57] INFO  - InsertTruck truckType=V/r
+2016-11-22 17:13:25,018 [57] INFO  - InsertTruck truckType=R/r
+2016-11-22 17:13:25,022 [61] INFO  - AssignTrkToVoy trkNo=60A36449 voyCode=GDFN partnerId=1/r
+2016-11-22 17:13:25,023 [61] INFO  - GetVoyATD/r
+2016-11-22 17:13:25,023 [62] INFO  - AssignTrkToVoy trkNo= voyCode=GDFN partnerId=1/r
+2016-11-22 17:13:25,024 [62] INFO  - GetVoyATD/r
+2016-11-22 17:13:25,259 [14] INFO  - GetVoyATD/r
+2016-11-22 17:17:39,322 [70] INFO  - GetVoyATD/r
+2016-11-22 17:19:07,824 [71] INFO  - GetVoyATD/r
+2016-11-22 18:31:34,571 [53] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 243
+/r
+2016-11-22 18:31:41,236 [59] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 243
+/r
+2016-11-22 18:31:43,264 [57] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 243
+/r
+2016-11-22 18:31:44,645 [59] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 243
+/r
+2016-11-22 18:36:01,128 [10] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 243
+/r
+2016-11-22 18:38:30,690 [11] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 243
+/r
+2016-11-22 18:51:17,702 [8] INFO  - Login success/r
+2016-11-22 18:52:00,906 [6] INFO  - Login success/r
+2016-11-22 18:53:10,729 [12] INFO  - GetVoyATD/r
+2016-11-22 18:57:08,528 [18] INFO  - GetVoyATD/r
+2016-11-22 18:57:52,326 [6] INFO  - GetVoyATD/r
+2016-11-22 19:06:33,944 [8] INFO  - GetVoyATD/r
+2016-11-23 09:32:10,986 [10] INFO  - Login success/r
+2016-11-23 09:32:50,264 [15] INFO  - CheckingController ImportExcel/r
+2016-11-23 09:32:50,265 [15] INFO  - GetVoyATD/r
+2016-11-23 09:32:54,099 [15] INFO  - Checking Controller GetCustomerByVoy Error: /r
+2016-11-23 09:32:54,101 [15] INFO  - GetListPartnerOracle voyId=1/r
+2016-11-23 09:47:23,030 [67] INFO  - CheckingController ImportExcel(model)/r
+2016-11-23 09:47:23,031 [67] INFO  - GetVoyATD/r
+2016-11-23 09:47:23,278 [67] INFO  - Import voyCode=GDFN userId=user customerId=1 fileImported=ExcelSample3.xlsx/r
+2016-11-23 09:47:23,290 [67] INFO  - IsExcel FileName=ExcelSample3.xlsx/r
+2016-11-23 09:47:23,291 [67] INFO  - SaveExcel voyCode=GDFN path=C:\VR_Upload/23112016/ExcelSample3.xlsx customerId=1 userName=user/r
+2016-11-23 09:47:26,038 [67] INFO  - ReadFile fileName=ExcelSample3.xlsx excelId=1003/r
+2016-11-23 09:47:26,577 [67] INFO  - SaveExcelDetail voyCode=GDFN/r
+2016-11-23 09:47:26,578 [67] INFO  - GetVoyATD/r
+2016-11-23 09:47:26,595 [67] INFO  - SaveExcelDetail voyId=1/r
+2016-11-23 09:47:26,665 [67] INFO  - SetChassisInfo voyId=1/r
+2016-11-23 09:47:26,666 [67] INFO  - SaveExcelDetail voyId=1/r
+2016-11-23 09:47:26,734 [67] INFO  - InsertTruck truckType=V/r
+2016-11-23 09:47:28,830 [67] INFO  - InsertTruck truckType=R/r
+2016-11-23 09:47:28,939 [67] INFO  - GetVoyATD/r
+2016-11-23 09:47:28,942 [68] INFO  - AssignTrkToVoy trkNo=72C12345T voyCode=GDFN partnerId=1/r
+2016-11-23 09:47:28,943 [68] INFO  - GetVoyATD/r
+2016-11-23 09:47:28,944 [67] INFO  - SaveExcelDetail voyId=1/r
+2016-11-23 09:47:28,968 [69] INFO  - AssignTrkToVoy trkNo= voyCode=GDFN partnerId=1/r
+2016-11-23 09:47:28,969 [69] INFO  - GetVoyATD/r
+2016-11-23 09:47:28,972 [67] INFO  - InsertTruck truckType=T/r
+2016-11-23 09:47:30,283 [67] INFO  - GetVoyATD/r
+2016-11-23 09:47:30,284 [72] INFO  - AssignTrkToVoy trkNo=52B56789T voyCode=GDFN partnerId=1/r
+2016-11-23 09:47:30,285 [72] INFO  - GetVoyATD/r
+2016-11-23 09:47:30,286 [67] INFO  - SaveExcelDetail voyId=1/r
+2016-11-23 09:47:30,339 [67] INFO  - InsertTruck truckType=T/r
+2016-11-23 09:47:30,440 [73] INFO  - AssignTrkToVoy trkNo=60A26449T voyCode=GDFN partnerId=1/r
+2016-11-23 09:47:30,441 [73] INFO  - GetVoyATD/r
+2016-11-23 09:47:49,779 [65] INFO  - GetVoyATD/r
+2016-11-23 09:51:15,792 [75] INFO  - GetVoyATD/r
+2016-11-23 09:56:36,148 [46] INFO  - GetVoyATD/r
+2016-11-23 09:57:28,470 [62] INFO  - GetVoyATD/r
+2016-11-23 09:59:21,275 [47] INFO  - GetVoyATD/r
+2016-11-23 09:59:31,255 [43] INFO  - GetVoyATD/r
+2016-11-23 10:00:04,185 [45] INFO  - GetVoyATD/r
+2016-11-23 10:04:02,901 [38] INFO  - GetVoyATD/r
+2016-11-23 10:06:39,046 [20] INFO  - GetVoyATD/r
+2016-11-23 10:15:38,568 [7] INFO  - GetVoyATD/r
+2016-11-23 10:21:33,094 [10] INFO  - GetVoyATD/r
+2016-11-23 10:28:55,212 [25] INFO  - GetInfoRegis:System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.
+   at System.Net.HttpWebRequest.GetResponse()
+   at VR.Web.UI.Controllers.CheckingController.ConnectToVR() in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 334
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 189
+/r
+2016-11-23 10:29:06,442 [25] INFO  - GetVoyATD/r
+2016-11-23 10:29:36,274 [27] INFO  - GetVoyATD/r
+2016-11-23 10:31:31,931 [21] INFO  - GetVoyATD/r
+2016-11-23 10:34:59,979 [18] INFO  - Object reference not set to an instance of an object./r
+2016-11-23 10:35:02,509 [13] INFO  - GetVoyATD/r
+2016-11-23 10:49:36,251 [11] INFO  - GetVoyATD/r
+2016-11-23 10:49:36,312 [11] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId, Nullable`1 excelDetailId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 255
+/r
+2016-11-23 10:50:29,260 [18] INFO  - GetVoyATD/r
+2016-11-23 10:50:29,319 [18] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId, Nullable`1 excelDetailId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 255
+/r
+2016-11-23 10:51:32,461 [13] INFO  - GetVoyATD/r
+2016-11-23 10:51:57,855 [13] INFO  - GetVoyATD/r
+2016-11-23 10:54:28,962 [6] INFO  - Login success/r
+2016-11-23 10:54:38,043 [8] INFO  - CheckingController ImportExcel/r
+2016-11-23 10:54:38,045 [8] INFO  - GetVoyATD/r
+2016-11-23 10:54:57,759 [5] INFO  - GetVoyATD/r
+2016-11-23 11:02:07,979 [9] INFO  - GetInfoRegis:System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at VR.Web.UI.Controllers.CheckingController.ConnectToVR() in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 346
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId, Nullable`1 excelDetailId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 197
+/r
+2016-11-23 11:02:53,798 [6] INFO  - GetVoyATD/r
+2016-11-23 11:03:15,682 [8] INFO  - GetVoyATD/r
+2016-11-23 11:30:19,275 [6] INFO  - GetVoyATD/r
+2016-11-23 13:30:25,412 [50] INFO  - GetVoyATD/r
+2016-11-23 13:30:46,555 [53] INFO  - GetVoyATD/r
+2016-11-23 13:30:50,978 [53] INFO  - GetVoyATD/r
+2016-11-23 13:30:57,299 [50] INFO  - GetVoyATD/r
+2016-11-23 13:31:03,186 [58] INFO  - GetVoyATD/r
+2016-11-23 13:31:13,438 [51] INFO  - GetVoyATD/r
+2016-11-23 13:31:21,188 [58] INFO  - GetVoyATD/r
+2016-11-23 13:31:53,453 [51] INFO  - GetVoyATD/r
+2016-11-23 13:31:58,883 [58] INFO  - GetVoyATD/r
+2016-11-23 13:32:02,058 [50] INFO  - GetVoyATD/r
+2016-11-23 13:32:12,246 [56] INFO  - GetVoyATD/r
+2016-11-23 13:32:21,309 [51] INFO  - GetVoyATD/r
+2016-11-23 13:33:50,696 [5] INFO  - GetVoyATD/r
+2016-11-23 13:48:56,254 [18] INFO  - GetVoyATD/r
+2016-11-23 14:03:27,740 [24] INFO  - GetVoyATD/r
+2016-11-23 14:12:23,593 [62] INFO  - GetVoyATD/r
+2016-11-23 14:26:12,609 [7] INFO  - GetVoyATD/r
+2016-11-23 14:34:38,089 [18] INFO  - GetVoyATD/r
+2016-11-23 14:49:50,002 [42] INFO  - GetVoyATD/r
+2016-11-23 14:49:50,992 [35] INFO  - GetVoyATD/r
+2016-11-23 14:50:02,310 [35] INFO  - GetVoyATD/r
+2016-11-23 14:50:24,854 [40] INFO  - GetVoyATD/r
+2016-11-23 14:50:46,700 [42] INFO  - GetVoyATD/r
+2016-11-23 14:50:57,574 [28] INFO  - GetVoyATD/r
+2016-11-23 14:52:45,696 [24] INFO  - GetVoyATD/r
+2016-11-23 15:06:36,230 [35] INFO  - GetVoyATD/r
+2016-11-23 15:09:24,988 [12] INFO  - GetVoyATD/r
+2016-11-23 15:16:16,145 [10] INFO  - GetVoyATD/r
+2016-11-23 15:16:38,195 [6] INFO  - GetVoyATD/r
+2016-11-23 15:17:10,301 [10] INFO  - GetVoyATD/r
+2016-11-23 15:17:17,072 [22] INFO  - GetVoyATD/r
+2016-11-23 15:17:39,323 [19] INFO  - GetVoyATD/r
+2016-11-23 15:18:02,403 [10] INFO  - GetVoyATD/r
+2016-11-23 16:37:22,792 [10] INFO  - Login success/r
+2016-11-23 16:39:52,767 [10] INFO  - Login success/r
+2016-11-23 16:41:51,268 [9] INFO  - Login success/r
+2016-11-23 16:42:17,181 [9] INFO  - GetVoyATD/r
+2016-11-23 16:44:19,791 [6] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId, Nullable`1 excelDetailId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 193
+/r
+2016-11-23 16:44:35,937 [9] INFO  - Login success/r
+2016-11-23 16:44:59,249 [8] INFO  - GetInfoRegis:System.NullReferenceException: Object reference not set to an instance of an object.
+   at VR.Web.UI.Controllers.CheckingController.GetInfoRegis(Int32 excelId, Nullable`1 excelDetailId) in D:\HiepPP\trunk\projects\group01\source\VR\VR.Web.UI\Controllers\CheckingController.cs:line 193
+/r
+2016-11-24 08:29:45,088 [13] INFO  - Login success/r
+2016-11-24 09:16:00,288 [10] INFO  - Login success/r
+2016-11-24 09:16:28,611 [10] INFO  - GetVoyATD

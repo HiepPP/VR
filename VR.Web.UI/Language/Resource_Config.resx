@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Alert_error" xml:space="preserve">
+    <value>Chỉnh sửa thất bại</value>
+  </data>
+  <data name="Alert_success" xml:space="preserve">
+    <value>Chỉnh sửa thành công</value>
+  </data>
+  <data name="AxleNo_error" xml:space="preserve">
+    <value>nhập ID số trục</value>
+  </data>
+  <data name="AxleNo_pla" xml:space="preserve">
+    <value>ID số trục...</value>
+  </data>
+  <data name="btnclose" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="btnsave" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="DateCheck_error" xml:space="preserve">
+    <value>nhập ID ngày kiểm định</value>
+  </data>
+  <data name="DateCheck_pla" xml:space="preserve">
+    <value>ID ngày kiểm định...</value>
+  </data>
+  <data name="GCNDate_error" xml:space="preserve">
+    <value>nhập ID hạn hiệu lực GCN</value>
+  </data>
+  <data name="GCNDate_pla" xml:space="preserve">
+    <value>ID hạn hiệu lực GCN...</value>
+  </data>
+  <data name="GCNStamp_error" xml:space="preserve">
+    <value> nhập ID số tem GCN</value>
+  </data>
+  <data name="GCNStamp_pla" xml:space="preserve">
+    <value>ID số tem GCN...</value>
+  </data>
+  <data name="GrossWeight_error" xml:space="preserve">
+    <value>nhập ID khối lượng toàn bộ cho phép TGGT</value>
+  </data>
+  <data name="GrossWeight_pla" xml:space="preserve">
+    <value>ID hối lượng toàn bộ cho phép TGGT...</value>
+  </data>
+  <data name="lblAxleNo" xml:space="preserve">
+    <value>Số trục</value>
+  </data>
+  <data name="lblDateCheck" xml:space="preserve">
+    <value>Ngày kiểm định</value>
+  </data>
+  <data name="lblGCNDate" xml:space="preserve">
+    <value>Hạn hiệu lực GCN</value>
+  </data>
+  <data name="lblGCNStamp" xml:space="preserve">
+    <value>Số tem GCN</value>
+  </data>
+  <data name="lblGrossWeight" xml:space="preserve">
+    <value>Khối lượng toàn bộ cho phép tham gia giao thông</value>
+  </data>
+  <data name="lblMaxSeat" xml:space="preserve">
+    <value>Số người cho phép chở (ngồi)</value>
+  </data>
+  <data name="lblNetWeight" xml:space="preserve">
+    <value>Khối Lượng Bản Thân</value>
+  </data>
+  <data name="lblTowedWeight" xml:space="preserve">
+    <value>Khối lượng kéo theo cho phép</value>
+  </data>
+  <data name="lblTruckType" xml:space="preserve">
+    <value>Loại phương tiện</value>
+  </data>
+  <data name="lblWebsiteAddress" xml:space="preserve">
+    <value>Địa chỉ Website</value>
+  </data>
+  <data name="lblWeightLimit" xml:space="preserve">
+    <value>Khối lượng hàng hóa chuyên chở cho phép TGGT</value>
+  </data>
+  <data name="MaxSeat_error" xml:space="preserve">
+    <value>nhập ID số người cho phép chở</value>
+  </data>
+  <data name="MaxSeat_pla" xml:space="preserve">
+    <value>ID số người cho phép chở ngồi...</value>
+  </data>
+  <data name="NetWeight_error" xml:space="preserve">
+    <value>nhập ID khối lượng bản thân</value>
+  </data>
+  <data name="NetWeight_pla" xml:space="preserve">
+    <value>ID khối lượng bản thân...</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Cấu hình tham số lấy tải trọng</value>
+  </data>
+  <data name="TowedWeight_error" xml:space="preserve">
+    <value>nhập ID khối lượng kéo theo cho phép</value>
+  </data>
+  <data name="TowedWeight_pla" xml:space="preserve">
+    <value>ID khối lượng kéo theo cho phép...</value>
+  </data>
+  <data name="TruckType_error" xml:space="preserve">
+    <value>nhập ID loại phương tiện</value>
+  </data>
+  <data name="TruckType_pla" xml:space="preserve">
+    <value>ID loại phương tiện...</value>
+  </data>
+  <data name="USER_NAME_error" xml:space="preserve">
+    <value>Vui lòng nhập tên tài khoản</value>
+  </data>
+  <data name="WebsiteAddress" xml:space="preserve">
+    <value>ID địa chỉ website lấy thông tin đăng kiểm</value>
+  </data>
+  <data name="WebsiteAddress_error" xml:space="preserve">
+    <value>nhập website lấy thông tin đăng kiểm</value>
+  </data>
+  <data name="WebsiteAddress_pla" xml:space="preserve">
+    <value>Địa chỉ website lấy cấu hình tải trọng</value>
+  </data>
+  <data name="WeightLimit_error" xml:space="preserve">
+    <value>nhập ID khối lượng hàng hóa cho phép TGGT</value>
+  </data>
+  <data name="WeightLimit_pla" xml:space="preserve">
+    <value>ID khối lượng hàng hóa cho phép TGGT...</value>
+  </data>
+  <data name="lbl_welcome" xml:space="preserve">
+    <value>Xin chào</value>
+  </data>
+  <data name="PWD_error" xml:space="preserve">
+    <value>Vui lòng nhập mật khẩu</value>
+  </data>
+  <data name="User_error" xml:space="preserve">
+    <value>Tài khoản hoặc mật khẩu không đúng!</value>
+  </data>
+  <data name="txt_confi_error" xml:space="preserve">
+    <value>Configuration error :</value>
+  </data>
+  <data name="txt_confi_succes" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+</root>
